@@ -175,28 +175,43 @@ const Index = () => {
           <h2 className="text-5xl font-bold mb-12 text-center gradient-text">
             Хобби
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { title: 'Танцы', icon: '💃', desc: 'Танцую и наслаждаюсь движением' },
-              { title: 'Чтение', icon: '📖', desc: 'Люблю погружаться в мир книг' },
-              { title: 'Музыка', icon: '🎵', desc: 'Слушаю разные жанры музыки' },
-              { title: 'Творчество', icon: '🎨', desc: 'Увлекаюсь творческими проектами' },
-              { title: 'Путешествия', icon: '✈️', desc: 'Мечтаю посетить разные страны' },
-              { title: 'Фотография', icon: '📷', desc: 'Запечатлеваю яркие моменты' },
-              { title: 'Спорт', icon: '⚡', desc: 'Забочусь о своем здоровье' },
-            ].map((hobby, index) => (
-              <Card
-                key={hobby.title}
-                className="p-8 glass-card hover:shadow-2xl transition-all duration-300 hover:scale-105 text-center group animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="text-6xl mb-4 group-hover:scale-125 transition-transform duration-300">
-                  {hobby.icon}
+          <div className="max-w-4xl mx-auto">
+            <Card className="p-12 glass-card hover:shadow-2xl transition-all duration-300 animate-fade-in">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="text-6xl">💃</div>
+                    <h3 className="text-4xl font-bold gradient-text">Танцы</h3>
+                  </div>
+                  <div className="space-y-4 text-lg text-gray-700">
+                    <p className="flex items-start gap-3">
+                      <span className="text-2xl">🏢</span>
+                      <span><strong>Школа танцев:</strong> IRON</span>
+                    </p>
+                    <p className="flex items-start gap-3">
+                      <span className="text-2xl">👥</span>
+                      <span><strong>Группа:</strong> Hip Mot Crew</span>
+                    </p>
+                    <p className="flex items-start gap-3">
+                      <span className="text-2xl">🎓</span>
+                      <span><strong>Преподаватель:</strong> Матвей Шмырин</span>
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-2">{hobby.title}</h3>
-                <p className="text-gray-600">{hobby.desc}</p>
-              </Card>
-            ))}
+                <div className="relative">
+                  <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                    <img 
+                      src="https://v3b.fal.media/files/b/kangaroo/zgcV50xPqGPKXiZhh5KBv_output.png" 
+                      alt="Танцы" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full gradient-pink-purple flex items-center justify-center text-4xl shadow-xl animate-pulse">
+                    🎵
+                  </div>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
